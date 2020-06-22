@@ -1,7 +1,7 @@
 {
-  "name": "react-native-mopub-sdk",
+  "name": "@wowmaking/react-native-mopub",
   "title": "React Native Mopub Sdk",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "this is mopub react native library",
   "main": "index.js",
   "scripts": {
@@ -9,28 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aliasad106/React-Native-Mopub-SDK",
-    "baseUrl": "https://github.com/aliasad106/React-Native-Mopub-SDK"
+    "url": "https://github.com/wowmaking/react-native-mopub",
+    "baseUrl": "https://github.com/wowmaking/react-native-mopub"
   },
   "keywords": [
     "react-native"
   ],
-  "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
-  },
-  "license": "Apache-2.0",
-  "licenseFilename": "LICENSE",
+  "license": "MIT",
   "readmeFilename": "README.md",
   "peerDependencies": {
-    "react": "16.2.0",
-    "react-native": "^0.52.0",
-    "react-native-windows": "0.52.0"
-  },
-  "devDependencies": {
-    "metro-react-native-babel-preset": "^0.53.1",
-    "react": "16.2.0",
-    "react-native": "^0.52.0",
-    "react-native-windows": "0.52.0"
+    "react": ">= 16.2",
+    "react-native": ">= 0.40.0"
   }
 }

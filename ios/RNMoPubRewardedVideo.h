@@ -15,7 +15,7 @@
 #import <React/RCTEventEmitter.h>
 
 #import <Foundation/Foundation.h>
-#import <mopub-ios-sdk/MoPub.h>
+#import "MoPub.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

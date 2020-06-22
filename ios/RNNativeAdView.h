@@ -8,8 +8,8 @@
 #import "RCTView.h"
 #import "MPNativeAdRendering.h"
 #import "MPNativeAdConstants.h"
-#import <RCTTextView.h>
-#import <mopub-ios-sdk/MoPub.h>
+#import "RCTTextView.h"
+#import "MoPub.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RNNativeAdView : RCTView <MPNativeAdRendering, MPNativeAdDelegate>

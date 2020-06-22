@@ -6,10 +6,10 @@
 //
 
 #import "RNMoPubRewardedVideo.h"
-#import <AdColonyGlobalMediationSettings.h>
-#import <MPGoogleGlobalMediationSettings.h>
-#import <TapjoyGlobalMediationSettings.h>
-#import <VungleInstanceMediationSettings.h>
+// #import <AdColonyGlobalMediationSettings.h>
+// #import <MPGoogleGlobalMediationSettings.h>
+// #import <TapjoyGlobalMediationSettings.h>
+// #import <VungleInstanceMediationSettings.h>
 #import "MPRewardedVideo.h"
 #import "AdLibSDK.h"
 @implementation RNMoPubRewardedVideo
@@ -42,7 +42,7 @@ RCT_EXPORT_METHOD(loadRewardedVideoAdWithAdUnitID:(NSString *)unitId)
 }
 
 RCT_EXPORT_METHOD(initializeSdkForRewardedVideoAd:(NSString *)unitId) {
-    [AdLibSDK initializeAdSDK:unitId];
+    [AdLibSDK initializeAdSDK:unitId consent:YES];
 }
 
 RCT_EXPORT_METHOD(presentRewardedVideoAdForAdUnitID:(NSString *) unitId currencyType:(NSString*)currencyType amount:(nonnull NSNumber*) amount callback:(RCTResponseSenderBlock)callback)

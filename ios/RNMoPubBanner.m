@@ -6,10 +6,10 @@
 //
 
 #import "RNMoPubBanner.h"
-#import <AdColonyGlobalMediationSettings.h>
-#import <MPGoogleGlobalMediationSettings.h>
-#import <TapjoyGlobalMediationSettings.h>
-#import <VungleInstanceMediationSettings.h>
+// #import <AdColonyGlobalMediationSettings.h>
+// #import <MPGoogleGlobalMediationSettings.h>
+// #import <TapjoyGlobalMediationSettings.h>
+// #import <VungleInstanceMediationSettings.h>
 #import "AdLibSDK.h"
 @implementation RNMoPubBanner
 
@@ -17,7 +17,7 @@
 
 - (id)initWithAdUnitId:(NSString *)adUnitId size:(CGSize)size {
     self = [super initWithAdUnitId:adUnitId size:size];
-    [AdLibSDK initializeAdSDK:adUnitId];
+    [AdLibSDK initializeAdSDK:adUnitId consent:YES];
     if (self) {
         self.delegate = self;
     }

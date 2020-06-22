@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AdLibSDK : NSObject
-+ (void) initializeAdSDK: (NSString *) unitID;
++ (void) initializeAdSDK: (NSString *) unitID consent: (BOOL) consent;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -2,10 +2,10 @@
 #import "RNMoPubInterstitial.h"
 #import <React/RCTLog.h>
 #import "RNNativeAdView.h"
-#import <AdColonyGlobalMediationSettings.h>
-#import <MPGoogleGlobalMediationSettings.h>
-#import <TapjoyGlobalMediationSettings.h>
-#import <VungleInstanceMediationSettings.h>
+//#import <AdColonyGlobalMediationSettings.h>
+//#import <MPGoogleGlobalMediationSettings.h>
+//#import <TapjoyGlobalMediationSettings.h>
+//#import <VungleInstanceMediationSettings.h>
 #import "MPNativeAdConstants.h"
 #import "AdLibSDK.h"
 
@@ -35,7 +35,7 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(initializeInterstitialAd:(NSString *)unitId)
 {
     
-    [AdLibSDK initializeAdSDK:unitId];
+    [AdLibSDK initializeAdSDK:unitId consent:YES];
     RCTLog(@"Mopub Initialized from Library!");
     self.interstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:unitId];
     self.interstitial.delegate = self;

@@ -7,7 +7,7 @@
 #import <React/RCTEventEmitter.h>
 
 #import <Foundation/Foundation.h>
-#import <mopub-ios-sdk/MoPub.h>
+#import "MoPub.h"
 
 @interface RNMoPubInterstitial : RCTEventEmitter <RCTBridgeModule, MPInterstitialAdControllerDelegate>
 @property (nonatomic, retain) MPInterstitialAdController *interstitial;

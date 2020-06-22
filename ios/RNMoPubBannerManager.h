@@ -6,7 +6,7 @@
 //
 
 #import "RCTViewManager.h"
-#import <mopub-ios-sdk/MoPub.h>
+#import "MoPub.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RNMoPubBannerManager : RCTViewManager
