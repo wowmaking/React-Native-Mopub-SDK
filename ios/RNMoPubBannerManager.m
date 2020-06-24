@@ -18,7 +18,7 @@ RCT_EXPORT_MODULE();
 
 - (UIView *)view
 {
-    RNMoPubBanner *view = [[RNMoPubBanner alloc] initWithAdUnitId:nil size:MOPUB_BANNER_SIZE];
+    RNMoPubBanner *view = [[RNMoPubBanner alloc] initWithAdUnitId:nil];
     return view;
 }
 

@@ -9,13 +9,15 @@ import com.mopub.common.SdkConfiguration;
 import com.mopub.common.SdkInitializationListener;
 import com.mopub.common.logging.MoPubLog;
 
+import com.facebook.react.bridge.Promise;
+
 /**
  * Created by usamaazam on 29/03/2019.
  */
 
 public class AdLibSDK {
 
-    static void initializeAdSDK(final RNMoPubBanner banner, final String adUnitId, final Activity context) {
+    static void initializeAdSDK(final RNMoPubBanner banner, final String adUnitId, final Activity context, final Promise promise) {
 
         Handler mainHandler = new Handler(context.getMainLooper());
 
@@ -25,7 +27,7 @@ public class AdLibSDK {
 
                 SdkConfiguration sdkConfiguration = new SdkConfiguration.Builder(adUnitId)
                         .withLogLevel(MoPubLog.LogLevel.DEBUG)
-                        .withLegitimateInterestAllowed(false)
+                        .withLegitimateInterestAllowed(true)
                         .build();
 
                 MoPub.initializeSdk(context, sdkConfiguration, initSdkListener());
@@ -40,7 +42,9 @@ public class AdLibSDK {
                             banner.setAdUnitId(adUnitId);
                             banner.loadAd();
                         }
-
+                        if (promise != null) {
+                            promise.resolve(null);
+                        }
                     }
                 };
             }

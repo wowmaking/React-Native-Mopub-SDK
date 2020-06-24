@@ -32,10 +32,10 @@ RCT_EXPORT_MODULE();
 
 
 
-RCT_EXPORT_METHOD(initializeInterstitialAd:(NSString *)unitId)
+RCT_EXPORT_METHOD(initializeInterstitialAd:(NSString *)unitId resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 {
     
-    [AdLibSDK initializeAdSDK:unitId consent:YES];
+    [AdLibSDK initializeAdSDK:unitId consent:YES resolve:resolve reject:reject];
     RCTLog(@"Mopub Initialized from Library!");
     self.interstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:unitId];
     self.interstitial.delegate = self;

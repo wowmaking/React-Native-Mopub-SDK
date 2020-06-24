@@ -6,11 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RCTBridgeModule.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AdLibSDK : NSObject
-+ (void) initializeAdSDK: (NSString *) unitID consent: (BOOL) consent;
++ (void) initializeAdSDK:(NSString *)unitID consent:(BOOL)consent resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject;
 @end
 
 NS_ASSUME_NONNULL_END

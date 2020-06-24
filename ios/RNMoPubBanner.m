@@ -15,13 +15,11 @@
 
 @synthesize adUnitId = _adUnitId;
 
-- (id)initWithAdUnitId:(NSString *)adUnitId size:(CGSize)size {
-    self = [super initWithAdUnitId:adUnitId size:size];
-    [AdLibSDK initializeAdSDK:adUnitId consent:YES];
+- (id)initWithAdUnitId:(NSString *)adUnitId {
+    self = [super initWithAdUnitId:adUnitId];
     if (self) {
         self.delegate = self;
     }
-    
     return self;
 }
 
@@ -30,7 +28,8 @@
 - (void)setAdUnitId:(NSString *)adUnitId {
     if(![adUnitId isEqual:_adUnitId]) {
         _adUnitId = adUnitId;
-        
+        [AdLibSDK initializeAdSDK:adUnitId consent:NO resolve:NULL reject:NULL];
+        [self loadAdWithMaxAdSize:kMPPresetMaxAdSize50Height];
         [self forceRefreshAd];
     }
 }
@@ -44,7 +43,7 @@
     CGSize adSize = [self adContentViewSize];
     self.frame = CGRectMake(0,0, adSize.width, adSize.height);
     if (_onLoaded)
-        _onLoaded(nil);
+        _onLoaded(@{ @"width": @(adSize.width), @"height": @(adSize.height) });
 }
 
 - (void)adViewDidFailToLoadAd:(MPAdView *)view {

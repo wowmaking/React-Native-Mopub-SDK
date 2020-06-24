@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { requireNativeComponent, View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -16,7 +16,7 @@ const BannerPropTypes = {
     ...View.propTypes
 };
 
-const Banner = requireNativeComponent('RNMoPubBanner', {name: 'Banner', propTypes: { ...BannerPropTypes }} );
+const Banner = requireNativeComponent('RNMoPubBanner', { name: 'Banner', propTypes: { ...BannerPropTypes } });
 
 export default class MoPubBanner extends Component {
 
@@ -47,6 +47,6 @@ export default class MoPubBanner extends Component {
 const styles = StyleSheet.create({
     bannerContainer: {
         height: 50,
-        minWidth: 320
+        minWidth: 320,
     }
 });

@@ -7,7 +7,9 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.bridge.WritableNativeMap;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
+
 import com.mopub.common.util.Dips;
 import com.mopub.mobileads.MoPubErrorCode;
 import com.mopub.mobileads.MoPubView;
@@ -63,8 +65,12 @@ public class RNMoPubBanner extends MoPubView implements MoPubView.BannerAdListen
         banner.measure(width, height);
         banner.layout(left, top, left + width, top + height);
 
+        WritableMap event = new WritableNativeMap();
+        event.putInt("width", banner.getAdWidth());
+        event.putInt("height", banner.getAdHeight());
+        
         ReactContext reactContext = (ReactContext) getContext();
-        reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(this.getId(), EVENT_LOADED, null);
+        reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(this.getId(), EVENT_LOADED, event);
     }
 
     @Override
