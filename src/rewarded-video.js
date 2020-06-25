@@ -103,20 +103,20 @@ export const RewardedVideo = {
     this.hasAdAvailableForAdUnitId(adUnitId)
       .then(has => {
         if (has) this._loadingDeferredMap[adUnitId].resolve();
-        else this._loadingDeferredMap[adUnitId].reject(new Error(`Doesn have revarded video ad for ${adUnitId}`));
+        else this._loadingDeferredMap[adUnitId].reject(new Error(`Doesn't have rewarded video ad for ${adUnitId}`));
       });
 
   },
 
   _handleLoadFail({ adUnitId, error }) {
-    this._loadingDeferredMap[adUnitId].reject(new Error(error));
+    this._loadingDeferredMap[adUnitId].reject(new Error(`Reward load fail: ${error}`));
     setTimeout(() => this._load(adUnitId), this._options.loadingTimeout || 5000);
   },
 
   _handleShow() { },
 
   _handleShowFail({ adUnitId, error, }) {
-    this._showDeferredMap[adUnitId].reject(new Error(error));
+    this._showDeferredMap[adUnitId].reject(new Error(`Reward show fail: ${error}`));
   },
 
   _handleHide({ adUnitId, }) {

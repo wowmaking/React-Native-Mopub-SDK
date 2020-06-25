@@ -56,12 +56,12 @@ RCT_EXPORT_METHOD(presentRewardedVideoAdForAdUnitId:(NSString *) unitId currency
         if (selectedReward) {
              UIViewController *vc = [UIApplication sharedApplication].delegate.window.rootViewController;
             [MPRewardedVideo presentRewardedVideoAdForAdUnitID:unitId fromViewController:vc withReward:selectedReward];
-             callback(@[@{@"message":@"video showing!"}]);
+             callback(@[@{@"message":@"video showing!", @"success": @TRUE}]);
         } else {
-            callback(@[@{@"message":@"reward not found! for these ingredients!"}]);
+            callback(@[@{@"message":@"reward not found! for these ingredients!", @"success": @FALSE}]);
         }
     } else {
-        callback(@[@{@"message":@"ad not found for this UnitId!"}]);
+        callback(@[@{@"message":@"ad not found for this UnitId!", @"success": @FALSE}]);
     }
     
 }

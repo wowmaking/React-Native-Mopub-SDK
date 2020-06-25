@@ -75,15 +75,10 @@ public class RNMoPubRewardedVideo extends ReactContextBaseJavaModule implements 
 
 
     private void sendCallBackMessage(Callback callback, boolean success, String message) {
-        try {
-            JSONObject dictionary = new JSONObject();
-            dictionary.put("success", success);
-            dictionary.put("message", message);
-            callback.invoke(dictionary.toString());
-
-        } catch (Exception ex) {
-            callback.invoke("Internet error!" + ex);
-        }
+        WritableMap dictionary = new WritableNativeMap();
+        dictionary.putBoolean("success", success);
+        dictionary.putString("message", message);
+        callback.invoke(dictionary);
     }
 
     private WritableMap createMapByAdUnitId(String adUnitId) {
