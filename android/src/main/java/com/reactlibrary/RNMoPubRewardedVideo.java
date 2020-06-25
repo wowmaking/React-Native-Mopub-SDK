@@ -37,18 +37,7 @@ public class RNMoPubRewardedVideo extends ReactContextBaseJavaModule implements 
         super(reactContext);
         mReactContext = reactContext;
     }
-
-            //    @"rewardedVideoAdDidLoadForAdUnitID",
-            //  @"rewardedVideoAdDidFailToLoadForAdUnitID",
-            //  @"rewardedVideoAdDidFailToPlayForAdUnitID",
-            //  @"rewardedVideoAdWillAppearForAdUnitID",
-            //  @"rewardedVideoAdDidAppearForAdUnitID",
-            //  @"rewardedVideoAdWillDisappearForAdUnitID",
-            //  @"rewardedVideoAdDidDisappearForAdUnitID",
-            //  @"rewardedVideoAdShouldRewardForAdUnitID",
-            //  @"rewardedVideoAdDidExpireForAdUnitID",
-            //  @"rewardedVideoAdDidReceiveTapEventForAdUnitID",
-            //  @"rewardedVideoAdWillLeaveApplicationForAdUnitID"
+    
 
     public static final String ON_REWARDED_VIDEO_LOAD_SUCCESS = "rewardedVideoAdDidLoadForAdUnitId";
     public static final String ON_REWARDED_VIDEO_LOAD_FAILURE = "rewardedVideoAdDidFailToLoadForAdUnitId";

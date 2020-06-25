@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {requireNativeComponent, View} from 'react-native';
+import React, { Component } from 'react';
+import { requireNativeComponent, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 
 const RNNativeAdViewPropTypes = {
@@ -9,11 +9,11 @@ const RNNativeAdViewPropTypes = {
     onWillPresentModalForNativeAd: PropTypes.func,
     onWillLeaveApplicationFromNativeAd: PropTypes.func,
     onDidDismissModalForNativeAd: PropTypes.func,
-    ...View.propTypes
+    ...ViewPropTypes,
 };
 
-const NativeAdView = requireNativeComponent('RNNativeAdView', {name: 'NativeAdView', propTypes: { ...RNNativeAdViewPropTypes }} );
-export default class RNNativeAdView extends Component {
+const RNNativeAdView = requireNativeComponent('RNNativeAdView', { name: 'NativeAdView', propTypes: { ...RNNativeAdViewPropTypes } });
+export class NativeAdView extends Component {
 
     static propTypes = {
         ...RNNativeAdViewPropTypes
@@ -21,7 +21,7 @@ export default class RNNativeAdView extends Component {
 
     render() {
         return (
-            <NativeAdView
+            <RNNativeAdView
 
                 adUnitId={this.props.adUnitId}
                 onNativeAdLoaded={this.props.onNativeAdLoaded}
@@ -31,7 +31,7 @@ export default class RNNativeAdView extends Component {
                 onDidDismissModalForNativeAd={this.props.onDidDismissModalForNativeAd}
             >
                 {this.props.children}
-            </NativeAdView>
+            </RNNativeAdView>
         );
     }
 }

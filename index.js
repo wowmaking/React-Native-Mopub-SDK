@@ -1,10 +1,4 @@
-import RNMoPubInterstitial from './src/RNMoPubInterstitial';
-import MoPubBanner from './src/MoPubBanner';
-import RNMoPubRewardedVideo from './src/RNMoPubRewardedVideo';
-import RNNativeAdView from './src/RNNativeAdView'
-module.exports = {
-    RNMoPubInterstitial,
-    MoPubBanner,
-    RNMoPubRewardedVideo,
-    RNNativeAdView
-};
+export { Interstitial, } from './src/interstitial';
+import { RewardedVideo, } from './src/rewarded-video';
+import { BannerView, } from './src/banner';
+import { NativeAdView } from './src/native-ad-view'
