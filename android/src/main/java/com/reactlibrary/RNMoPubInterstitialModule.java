@@ -73,7 +73,12 @@ public class RNMoPubInterstitialModule extends ReactContextBaseJavaModule implem
     @ReactMethod
     public void show() {
         if (mInterstitial != null) {
-            mInterstitial.show();
+            mReactContext.getCurrentActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    mInterstitial.show();
+                }
+            });
         }
     }
 

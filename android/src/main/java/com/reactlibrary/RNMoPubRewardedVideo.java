@@ -88,7 +88,7 @@ public class RNMoPubRewardedVideo extends ReactContextBaseJavaModule implements 
     }
 
     @ReactMethod
-    public void presentRewardedVideoAdForAdUnitId(String unitId, String currencyType, Double amount, Callback callback) {
+    public void presentRewardedVideoAdForAdUnitId(final String unitId, String currencyType, Double amount, Callback callback) {
 
 
         Set<MoPubReward> rewards = MoPubRewardedVideos.getAvailableRewards(unitId);
@@ -103,7 +103,12 @@ public class RNMoPubRewardedVideo extends ReactContextBaseJavaModule implements 
                 }
             }
             if (selectedReward != null) {
-                MoPubRewardedVideos.showRewardedVideo(unitId);
+                mReactContext.getCurrentActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        MoPubRewardedVideos.showRewardedVideo(unitId);
+                    }
+                });
                 sendCallBackMessage(callback, true, "video showing!");
 
             } else {

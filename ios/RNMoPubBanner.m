@@ -29,7 +29,7 @@
     if(![adUnitId isEqual:_adUnitId]) {
         _adUnitId = adUnitId;
         [AdLibSDK initializeAdSDK:adUnitId consent:NO resolve:NULL reject:NULL];
-        [self loadAdWithMaxAdSize:kMPPresetMaxAdSize50Height];
+        [self loadAdWithMaxAdSize:MOPUB_BANNER_SIZE];
         [self forceRefreshAd];
     }
 }
