@@ -9,10 +9,7 @@
 #import "MPMoPubConfiguration.h"
 #import "RCTBridgeModule.h"
 #import "AdLibSDK.h"
-#import "AdColonyGlobalMediationSettings.h"
-// #import "MPGoogleGlobalMediationSettings.h"
-// #import "TapjoyGlobalMediationSettings.h"
-// #import "VungleInstanceMediationSettings.h"
+
 
 @implementation AdLibSDK
 
