@@ -63,56 +63,6 @@ dependencies {
     implementation('com.mopub:mopub-sdk:+@aar') {
         transitive = true
     }
-
-    // AdColony
-    implementation 'com.adcolony:sdk:4.1.4'
-    implementation 'com.mopub.mediation:adcolony:4.1.4.2'
-
-    // AppLovin
-    implementation 'com.applovin:applovin-sdk:9.12.8'
-    implementation 'com.mopub.mediation:applovin:9.12.8.0'
-
-    // Chartboost
-    implementation 'com.chartboost:chartboost-sdk:8.0.3'
-    implementation 'com.mopub.mediation:chartboost:8.0.3.0'
-
-    // Facebook Audience Network
-    implementation 'com.facebook.android:audience-network-sdk:5.10.0'
-    implementation 'com.mopub.mediation:facebookaudiencenetwork:5.10.0.0'
-
-    // Google (AdMob & Ad Manager)
-    implementation 'com.google.android.gms:play-services-ads:19.2.0'
-    implementation 'com.mopub.mediation:admob:19.2.0.1'
-
-    // Mintegral
-    implementation 'com.mintegral.msdk:mtgbanner:14.2.01'
-    implementation 'com.mintegral.msdk:interstitialvideo:14.2.01'
-    implementation 'com.mintegral.msdk:videojs:14.2.01'
-    implementation 'com.mintegral.msdk:nativeex:14.2.01'
-    implementation 'com.mintegral.msdk:mtgjscommon:14.2.01'
-    implementation 'com.mintegral.msdk:playercommon:14.2.01'
-    implementation 'com.mintegral.msdk:reward:14.2.01'
-    implementation 'com.mintegral.msdk:videocommon:14.2.01'
-    implementation 'com.mintegral.msdk:common:14.2.01'
-    implementation 'com.mintegral.msdk:mtgnative:14.2.01'
-    implementation 'com.mintegral.msdk:mtgbid:14.2.01'
-    implementation 'com.mopub.mediation:mintegral:14.2.01.0'
-
-    // Tapjoy
-    implementation 'com.tapjoy:tapjoy-android-sdk:12.6.0@aar'
-    implementation 'com.mopub.mediation:tapjoy:12.6.0.0'
-
-    // Unity Ads
-    implementation 'com.unity3d.ads:unity-ads:3.4.6'
-    implementation 'com.mopub.mediation:unityads:3.4.6.0'
-
-    // Vungle
-    implementation 'com.vungle:publisher-sdk-android:6.7.0'
-    implementation 'com.mopub.mediation:vungle:6.7.0.0'
-
-    // ironSource
-    implementation 'com.ironsource.sdk:mediationsdk:6.17.0'
-    implementation 'com.mopub.mediation:ironsource:6.17.0.0'
 }
 
 def configureReactNativePom(def pom) {
