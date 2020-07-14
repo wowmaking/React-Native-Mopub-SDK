@@ -109,8 +109,11 @@ export const RewardedVideo = {
   availableRewardsForAdUnitId(adUnitId) {
     const deferred = new Deferred();
     RNMoPubRewardedVideo.availableRewardsForAdUnitId(adUnitId, (...units) => {
-      const unitsArray = Object.entries(units).map(([currencyType, amount]) => ({ currencyType, amount, }))
-      deferred.resolve(unitsArray)
+      const unitsArray = units.reduce((data, unit) => ([
+        ...data,
+        ...Object.entries(unit).map(([currencyType, amount]) => ({ currencyType, amount })),
+      ]), []);
+      deferred.resolve(unitsArray);
     });
     return deferred.promise;
   },
