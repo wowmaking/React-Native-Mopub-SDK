@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package net.wowmaking.mopub;
 
 import android.view.View;
 import android.view.ViewGroup;

@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package net.wowmaking.mopub;
 
 import java.util.ArrayList;
 import java.util.Arrays;

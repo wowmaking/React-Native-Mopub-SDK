@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package net.wowmaking.mopub;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.LifecycleEventListener;

@@ -68,7 +68,7 @@ RCT_EXPORT_METHOD(presentRewardedVideoAdForAdUnitId:(NSString *) unitId currency
 
 RCT_EXPORT_METHOD(hasAdAvailableForAdUnitId:(NSString* ) unitId callback: (RCTResponseSenderBlock)callback) {
     BOOL hasAd = [MPRewardedVideo hasAdAvailableForAdUnitID:unitId];
-    callback(@[@{@"Has ad": @(hasAd)}]);
+    callback(@[@(hasAd)]);
 }
 
 RCT_EXPORT_METHOD(availableRewardsForAdUnitId: (NSString *)unitId callback: (RCTResponseSenderBlock)callback) {

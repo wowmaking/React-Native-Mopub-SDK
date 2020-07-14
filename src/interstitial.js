@@ -32,7 +32,7 @@ export const Interstitial = {
 
   /**
    * 
-   * @returns {Promies<void>}
+   * @returns {Promise<void>}
    */
   load() {
     this._loadDeferred = new Deferred();
@@ -42,7 +42,7 @@ export const Interstitial = {
 
   /**
    * 
-   * @returns {Promies<void>}
+   * @returns {Promise<void>}
    */
   show() {
     this._showDeferred = new Deferred();
@@ -52,7 +52,7 @@ export const Interstitial = {
 
   /**
    * 
-   * @returns {Promies<boolean>}
+   * @returns {Promise<boolean>}
    */
   isReady() {
     return RNMoPubInterstitial.isReady();

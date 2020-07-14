@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package net.wowmaking.mopub;
 
 import android.app.Activity;
 import android.content.Context;

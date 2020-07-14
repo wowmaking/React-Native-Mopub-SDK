@@ -20,5 +20,8 @@
   "peerDependencies": {
     "react": ">= 16.2",
     "react-native": ">= 0.40.0"
+  },
+  "dependencies": {
+    "events": "^3.1.0"
   }
 }
